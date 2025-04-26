@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-### 建立 MCP Server
+### 我的 Github 專案
 
 [🔗 我的 Github 專案: 【n8n】](https://github.com/chiisen/n8n)  
 全面瞭解 n8n v1.88.0 的重磅更新 —— MCP Server

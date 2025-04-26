@@ -82,4 +82,10 @@ npm run build
 ```
 public
 ```
-發佈網址: https://104-5nh.pages.dev/
+### 變數與秘密
+![變數與秘密](./images/NODE_VERSION.png)
+```
+NODE_VERSION 20.11.0
+```
+發佈網址: https://docs-axs.pages.dev
+

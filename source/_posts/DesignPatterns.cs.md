@@ -5,7 +5,7 @@ tags:
 ---
 
 ## DesignPatterns.cs
-
+![Design Patterns In CS](../images/DesignPatternsInCS.png)
 C# 設計模式學習筆記與程式碼範例。
 
 <!-- more -->

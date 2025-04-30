@@ -1,16 +1,16 @@
-# ¤£±À°e .DS_Store ÀÉ®×
+# ä¸æŽ¨é€ .DS_Store æª”æ¡ˆ
 .DS_Store
-# ¤£±À°e Thumbs.db ÀÉ®×
+# ä¸æŽ¨é€ Thumbs.db æª”æ¡ˆ
 Thumbs.db
-# ¤£±À°e db.json ÀÉ®×
+# ä¸æŽ¨é€ db.json æª”æ¡ˆ
 db.json
-# ¤£±À°e°ÆÀÉ¦W¬° .log ªºÀÉ®×¡]¬P¸¹¬°¸U¥Î¦r¤¸¡A¥Nªí¥ô¦ó¼Æ¥Øªº¦r¤¸¡^
+# ä¸æŽ¨é€å‰¯æª”åç‚º .log çš„æª”æ¡ˆï¼ˆæ˜Ÿè™Ÿç‚ºè¬ç”¨å­—å…ƒï¼Œä»£è¡¨ä»»ä½•æ•¸ç›®çš„å­—å…ƒï¼‰
 *.log
-# ¤£±À°e¥Ø¿ý node_modules »P¨ä¤ºÀÉ®×
+# ä¸æŽ¨é€ç›®éŒ„ node_modules èˆ‡å…¶å…§æª”æ¡ˆ
 node_modules/
-# ¤£±À°e¥Ø¿ý public »P¨ä¤ºÀÉ®×
+# ä¸æŽ¨é€ç›®éŒ„ public èˆ‡å…¶å…§æª”æ¡ˆ
 public/
-# ¤£±À°e¶}ÀY¬° .deploy ªº¥Ø¿ý
+# ä¸æŽ¨é€é–‹é ­ç‚º .deploy çš„ç›®éŒ„
 .deploy*/
 _multiconfig.yml
 /desktop.ini

@@ -47,6 +47,8 @@ A只需要知道B提供的接口，而不需要知道C的存在，從而減少�
 設計模式 SimpleFactory、AbstractFactory、FactoryMethod 的差異為何?  
 這三種設計模式都是用來創建對象的工廠模式，但它們在結構和用途上有所不同：  
 
+![Factory Pattern](../images/DesignPatternsInCS/FactoryPattern.png)
+
 1. **Simple Factory (簡單工廠模式)**：  
 - ⭐ 1️⃣ 簡單工廠(SimpleFactory)  
 結構：由一個工廠類負責創建所有的產品對象。  

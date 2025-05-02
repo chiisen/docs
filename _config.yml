@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site / 網站資訊
-title: "⭐️ Sam 的文章分享(持續累積中🏃‍♂️)(Hexo 1.0.1 版)"
+title: "⭐️ Sam 的文章分享(持續累積中🏃‍♂️)(Hexo 1.0.2 版)"
 subtitle: ""
 description: ""
 keywords: ""
 author: "Sam"
-language: "tw"
+language: "en"
 timezone: "Asia/Taipei"
 
 # URL / 網址設定
@@ -99,7 +99,7 @@ ignore:
 # Extensions / 擴充功能
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment / 部署設定
 ## Docs: https://hexo.io/docs/one-command-deployment

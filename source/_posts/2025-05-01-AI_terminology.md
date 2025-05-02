@@ -5,7 +5,7 @@ tags:
 ---
 
 # AI 相關術語依出現時間排序（含例子）
-
+![MCP](../images/AI_terminology.png)
 ## 早期階段（1950s–1990s）
 1. **Neural Network（神經網路）**：模仿人腦結構的 AI 模型。  
    例如：辨識手寫數字的模型（如 MNIST）。

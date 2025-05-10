@@ -11,6 +11,18 @@ CLine 透過 .clinerules 自定義指令，並附上多個範例文件。
 
 <!-- more -->
 
+## Custom Instructions(自訂義指令)
+如上截圖所示，範例如下:  
+```md!
+Always write comments in Chinese for each function
+Where writing JavaScript, prefer function programming paradigms over object-oriented approaches where appropriate
+```
+翻譯成中文:
+```md!
+務必為每個函數寫上中文註釋
+在編寫 JavaScript 時，在適當的情況下優先使用函數程式設計範式而不是物件導向的方法
+```
+
 ## .clinerules 範例
 目錄下的個別專案 CLine 所使用的 Rules 設定(.clinerules 是一個檔案名時)
 ```markdown

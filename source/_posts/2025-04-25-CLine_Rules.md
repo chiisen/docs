@@ -5,13 +5,14 @@ tags:
 ---
 
 # CLine (.clinerules)
-![MCP](../images/CLine_Custom_Instructions.png)  
+![CLine](../images/CLineRules/CLineRules.png)  
 
 CLine 透過 .clinerules 自定義指令，並附上多個範例文件。  
 
 <!-- more -->
 
 ## Custom Instructions(自訂義指令)
+![Custom Instructions](../images/CLineRules/CLine_Custom_Instructions.png)  
 如上截圖所示，範例如下:  
 ```md!
 Always write comments in Chinese for each function

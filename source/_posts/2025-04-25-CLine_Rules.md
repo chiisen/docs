@@ -50,3 +50,11 @@ use context7 搜索 Tailwind CSS 最新版關於響應式設計的文檔
 (.clinerules 是一個目錄名時，目錄裡面允許多個設定檔案)  
 
 可以參考下面我的 GitHub 筆記 https://github.com/chiisen/CLine  
+內容包含:  
+- 01-tech-stack.md 【技術偏好】
+- 02-project-structure.md 【專案結構】
+- 03-code-style.md 【代碼風格和模式】
+- 04-styling.md 【樣式指南】
+- 05-ollama-config.md 【Ollama 配置】
+- 06-app-logic.md 【應用核心邏輯】
+- 07-important-files.md 【重要文件位置（請勿修改）】

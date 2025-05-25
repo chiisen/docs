@@ -80,7 +80,7 @@ public
 title: "⭐️ Sam 的文章分享(持續累積中🏃‍♂️)(cloudflare + Hexo 1.0.5 版)"
 ```
 一般 npm 套件是修改 `package.json` 的 0.0.0 版本號  
-```
+```shell
 "version": "0.0.0",
 ```
 但是目前沒辦法顯示在畫面上，所以才修改 Hexo 上的標題設定檔案 `_config.yml` 的版本號  

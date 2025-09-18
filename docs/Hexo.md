@@ -43,6 +43,11 @@ FATAL Permission denied. You can't use port 4000.
 hexo server -p 5000
 ```
 
+# 升級專案內的 Hexo 版本
+```
+npm install hexo@latest --save
+```
+
 # 清除靜態檔案與快取
 ```shell
 hexo clean

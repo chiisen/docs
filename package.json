@@ -12,7 +12,7 @@
     "version": "8.0.0"
   },
   "resolutions": {
-    "strip-ansi": "6.0.1"
+    "strip-ansi": "7.1.2"
   },
   "dependencies": {
     "cuid": "^3.0.0",
@@ -30,7 +30,7 @@
     "hexo-tag-embed": "^1.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "inflight": "^1.0.6",
-    "strip-ansi": "6.0.1"
+    "strip-ansi": "7.1.2"
   },
   "packageManager": "yarn@4.10.2"
 }

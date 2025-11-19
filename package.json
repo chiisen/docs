@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "cuid": "^3.0.0",
-    "glob": "^10.3.10",
+    "glob": "^13.0.0",
     "hexo": "^8.0.0",
     "hexo-cli": "^4.3.2",
     "hexo-generator-archive": "^2.0.0",

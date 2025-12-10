@@ -9,6 +9,8 @@ tags:
 
 Nano Banana Pro 提示詞工程神器。專為高品質影像生成設計。
 
+<!-- more -->
+
 [Demo 網站](https://nano-banana-pro-pink.vercel.app/)
 
 PS-需要申請付費的 AI Studio 上的 Gemini API Key
@@ -25,9 +27,6 @@ PS-需要申請付費的 AI Studio 上的 Gemini API Key
 ---
 
 ![photo_2025-12-10_18-46-49.jpg](../images/photo_2025-12-10_18-46-49.jpg)
-
-
-<!-- more -->
 
 ### 我的 Github 專案
 

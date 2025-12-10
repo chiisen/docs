@@ -4,7 +4,7 @@ date: 2025-11-27 00:00:00
 tags:
 ---
 
-## OpenSpec
+## Antigravity
 ![VibeCodingGamingPlatform](../images/Online.png)
 
 使用 Google Antigravity 配合 Comet 瀏覽器分析需求，來模仿某知名遊戲平台。

@@ -1,0 +1,26 @@
+name: Telegram Notification
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  telegram-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Telegram Notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            🚀 **Commit Pushed**
+            
+            👤 **User:** ${{ github.actor }}
+            📝 **Message:** ${{ github.event.head_commit.message }}
+            📂 **Repo:** ${{ github.repository }}
+            
+            🔗 [View Commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})

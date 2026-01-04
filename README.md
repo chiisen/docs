@@ -23,3 +23,8 @@ NODE_VERSION 20.11.0
 ```
 發佈網址: https://docs-axs.pages.dev
 
+### 新增文章目錄
+```bash
+.\source\_posts\*.md
+```
+

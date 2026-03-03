@@ -15,3 +15,8 @@ public/
 _multiconfig.yml
 /desktop.ini
 /*.ico
+
+# Yarn 4 暫存檔
+.yarn/install-state.gz
+.pnp.*
+

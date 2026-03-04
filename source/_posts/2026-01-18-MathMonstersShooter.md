@@ -14,6 +14,8 @@ tags:
 
 這是一個結合數學教育與射擊遊戲的瀏覽器應用程式。玩家駕駛飛船，透過計算數學題目來發射子彈，擊退不斷來襲的數字怪物。目標是提供國小低年級學生一個充滿趣味的計算練習環境。
 
+![MathMonstersShooter](../images/MathMonstersShooter.png)
+
 <!-- more -->
 
 # 🌟 核心特色

@@ -17,6 +17,8 @@ tags:
 
 ![voice-activated-assistant](../images/voice-activated-assistant.png)
 
+![voice-activated-assistant](../images/Voice-activated_assistant.gif)
+
 <!-- more -->
 
 # 🚀 快速啟動

@@ -14,7 +14,6 @@ tags:
 
 gofm (Go File Manager) 是一款基於 Bubble Tea 框架開發的高效能終端機檔案管理工具。它結合了傳統 ls/cd 的極速與圖形介面的視覺便利性，專為開發者打造一個流暢的檔案管理體驗。
 
-![TerminalFileManager](../images/TerminalFileManager.png)
 ![TerminalFileManager](../images/Terminal_File_Manager.gif)
 
 <!-- more -->

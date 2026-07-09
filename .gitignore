@@ -28,3 +28,6 @@ _multiconfig.yml
 
 .python-version
 
+# AI Agent 工具與本地授權設定
+.claude/
+.opencode/

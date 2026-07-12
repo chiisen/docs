@@ -14,7 +14,7 @@ tags:
 
 這是一個基於 Python 開發的高效能、隱私優先的本地端語音代理系統。透過整合最新的 Qwen3 ASR 與 TTS 技術，實現流暢的語音指令識別與自動化回應。
 
-![VoiceActivatedAssistant](../images/VoiceActivatedAssistant.png)
+![VoiceActivatedAssistant](../images/voice-activated-assistant.png)
 
 <!-- more -->
 

@@ -14,9 +14,9 @@ tags:
 
 <!-- more -->
 
-當 AI 寫程式的工具從「一個聊天框」長成「一整排終端機」之後，新的問題就出現了：你要同時盯五個 Agent、五個分支、五份 diff，還要記得哪一個跑到哪一步。
+當 AI 寫程式的工具從「一個聊天框」長成「一整排終端機」，新的問題就出現了：你要同時盯五個 Agent、五個分支、五份 diff，還要記得哪一個跑到哪一步。
 
-Orca 想解決的就是這件事。它的自我定位很明確——**面向 100x 構建者的 AI 編排器（AI orchestrator）**，不是再訓練一個更強的模型，而是把「同時操作多個 Agent」這件事變成一套可以管理的介面。
+Orca 處理的就是這件事。它自稱「面向 100x 構建者的 AI 編排器（AI orchestrator）」，不訓練模型，而是把「同時操作多個 Agent」變成一套管得住的介面。
 
 ---
 
@@ -31,7 +31,7 @@ Orca 想解決的就是這件事。它的自我定位很明確——**面向 100
 | 建立時間 | 2026-03（撰稿時約 9.8 萬 Star、6.2 千 Fork） |
 | 官網 / 文件 | [onorca.dev](https://www.onorca.dev/) |
 
-它自己不做推論。你用它既有的訂閱跑自己的 Agent——Claude Code、Codex、Grok、Cursor、Copilot、OpenCode 都可以，只要能在終端機裡跑就行。
+它自己不做推論。你用它既有的訂閱跑自己的 Agent，Claude Code、Codex、Grok、Cursor、Copilot、OpenCode 都可以，只要能在終端機裡跑就行。
 
 ---
 
@@ -41,7 +41,7 @@ Orca 想解決的就是這件事。它的自我定位很明確——**面向 100
 
 > **同一個提示，同時丟給五個 Agent，各自在自己的 worktree 裡做，做完再比結果。**
 
-這在工程上不是新想法（`git worktree` 本來就是為此而生），但把它做進 GUI，並且處理掉 worktree 建立、分支切換、diff 檢視、合併比較這些瑣事，才是 Orca 的價值所在。隔離帶來的好處很實際：五個 Agent 亂改檔案也互不干擾，你只需要挑一個留下來。
+這在工程上不是新想法（`git worktree` 本來就是為此而生），但把它做進 GUI，並且處理掉 worktree 建立、分支切換、diff 檢視、合併比較這些瑣事，才是 Orca 真正在做的事。隔離的好處很直接：五個 Agent 亂改檔案也互不干擾，你只要挑一個留下來。
 
 ---
 
@@ -59,22 +59,22 @@ Orca 想解決的就是這件事。它的自我定位很明確——**面向 100
 | **Orca CLI** | `orca worktree create`、`snapshot`、`click`、`fill`，把工作流腳本化 |
 | **行動 Companion App** | 手機監控與指揮 Agent，完成時收到通知，隨時補一句後續指令 |
 
-還有幾個比較容易被忽略但實用的：
+還有幾個比較少被提到但實用的：
 
-- 🔎 **快速開啟**：在 worktree、檔案、Agent、指令之間跳轉，不用離開鍵盤流。
-- 📊 **用量追蹤**：查看 Claude / Codex 的用量與額度重置時間，並熱切換帳號。
-- 🖥️ **Computer Use**：需要真實互動時，讓 Agent 操作桌面應用與可見 UI。
-- 🔔 **通知與未讀**：Agent 完成或需要你時立即知道，也能標記未讀稍後再處理。
+- 快速開啟：在 worktree、檔案、Agent、指令之間跳轉，不用離開鍵盤流。
+- 用量追蹤：顯示 Claude 與 Codex 的用量和額度重置時間，換帳號也不必重新登入。
+- Computer Use：需要真實互動時，讓 Agent 操作桌面應用與可見 UI。
+- 通知與未讀：Agent 完成或需要你時會通知，也能標記未讀稍後再處理。
 
 ---
 
 # 🤖 支援的 Agent
 
-官方列出的清單很長，但規則只有一條：**能在終端機跑，就能在 Orca 跑。**
+官方列出的清單很長，規則只有一條：**能在終端機跑，就能在 Orca 跑。**
 
-Claude Code、Codex、Grok、Cursor、GitHub Copilot、OpenCode、Amp、Kimi、Kiro、Qwen Code、Goose、Cline、Continue、Droid、Mistral Vibe、Rovo Dev、Charm…族繁不及備載。
+Claude Code、Codex、Grok、Cursor、GitHub Copilot、OpenCode、Amp、Kimi、Kiro、Qwen Code、Goose、Cline、Continue、Droid、Mistral Vibe、Rovo Dev、Charm……族繁不及備載。
 
-這件事的意義在於**不綁定供應商**。今天 Claude Code 順手就用它，明天想換 Codex 比較同一題的答案，介面不用重學。
+好處是不綁定供應商。今天 Claude Code 順手就用它，明天想換 Codex 比較同一題的答案，介面不用重學。
 
 ---
 
@@ -100,28 +100,28 @@ iOS 從 App Store 安裝，Android 直接下載 APK，與桌面端配對後就�
 
 ---
 
-# 🔍 三個值得注意的設計選擇
+# 🔍 三個設計取捨
 
 ### 1️⃣ 用 worktree 當隔離單位，而不是容器
 
-比起開五個 VM 或五個 container，worktree 便宜得多：共享同一個 repo 的物件庫，切換只是換目錄。代價是隔離只在檔案層級，Agent 執行的指令仍然共用同一台機器——所以對「跑來路不明的程式」沒有防護力，這是使用時要自己拿捏的邊界。
+比起開五個 VM 或五個 container，worktree 便宜得多：共享同一個 repo 的物件庫，切換只是換目錄。代價是隔離只在檔案層級，Agent 執行的指令仍然共用同一台機器，所以對「跑來路不明的程式」沒有防護力。這條界線要自己拿捏。
 
 ### 2️⃣ 讓 Agent 也能驅動 Orca
 
-`orca worktree create`、`snapshot`、`click`、`fill` 這組 CLI 意味著反向操作：不只是你用 Orca 管 Agent，Agent 也能呼叫 Orca 去開工作區、截圖、點按鈕。這讓「Agent 操作 GUI」變成可腳本化的流程，也讓 Computer Use 這類功能有了比較穩的落點。
+`orca worktree create`、`snapshot`、`click`、`fill` 這組 CLI 是反向操作：不只是你用 Orca 管 Agent，Agent 也能呼叫 Orca 去開工作區、截圖、點按鈕。Agent 操作 GUI 這件事因此可以腳本化，Computer Use 這類功能也有了比較穩的落點。
 
 ### 3️⃣ 把「離開電腦」當成正式場景
 
-行動 companion app 不是附贈的遙測面板，而是補上 AI 開發最實際的痛點：Agent 跑完通常不是在你盯著螢幕的時候。通知加上「隨手回一句」，等於把等待時間換成可用的時間。
+手機 companion app 處理的是 AI 開發很實際的狀況：Agent 跑完的時候，你通常不在螢幕前。通知加上能隨手回一句，等待的時間就沒那麼浪費。
 
 ---
 
 # ⚠️ 使用前想想這幾件事
 
-- 🧾 **它不提供模型**：你要自備訂閱或 API Key，Orca 只負責編排。用量與費用仍由各供應商計算。
-- 🔐 **本機信任邊界**：Agent 在你的機器上執行真實指令，worktree 只隔離檔案，不隔離權限。
-- 📡 **遙測**：官方文件有說明收集哪些匿名使用資料與退出方式，在意的人先讀 [telemetry 文件](https://www.onorca.dev/docs/telemetry)。
-- 🔄 **迭代極快**：專案自稱每天發版，README 的功能清單永遠落後，實際能力以[更新日誌](https://github.com/stablyai/orca/releases)為準。
+- 它不提供模型。訂閱或 API Key 要自備，費用由各供應商計算。
+- 本機信任邊界。Agent 在你機器上執行真實指令，worktree 只隔離檔案，不隔離權限。
+- 遙測。官方文件有說明收集哪些匿名使用資料與退出方式，在意的人先讀 [telemetry 文件](https://www.onorca.dev/docs/telemetry)。
+- 迭代很快。專案自稱每天發版，README 的功能清單永遠落後，實際能力以[更新日誌](https://github.com/stablyai/orca/releases)為準。
 
 ---
 

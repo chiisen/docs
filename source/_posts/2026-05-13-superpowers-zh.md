@@ -16,9 +16,9 @@ tags:
 
 不少人已經在用英文版 `superpowers`，看到中文版的第一個反應大概是「這不是重複造輪子嗎」。我一開始也這樣想。實際裝起來用了一陣子，覺得還是值得寫一篇，因為它處理的問題跟英文版不太一樣。
 
-先講清楚一件事：英文上游沒有過時，它就是方法論的源頭，版本也跟得最緊。中文版多出來的是中文語境的表達、26 款工具的一鍵安裝，以及四個針對中文團隊另外寫的 skill。
+英文上游沒有過時，它就是方法論的源頭，版本也跟得最緊。中文版多出來的是中文語境的表達、26 款工具的一鍵安裝，以及四個針對中文團隊另外寫的 skill。
 
-另一個附加價值，也是我想推薦它的主因：21 個 `SKILL.md` 本身就是 prompt 設計的範例。翻過一輪之後，我對「怎麼寫指令模型才會照做」總算有點具體概念，不再只是憑感覺調字句。
+我推薦它的另一個理由更實際：21 個 `SKILL.md` 本身就是 prompt 設計的範例。翻過一輪之後，我對「怎麼寫指令模型才會照做」總算有點具體概念，不再只是憑感覺調字句。
 
 這個部落格專案本身就在用它（`.agents/skills/` 下有 20 個 skill），所以下面有些觀察是實際跑出來的，不只是讀 README。
 
@@ -53,7 +53,7 @@ tags:
 
 - 上游 `obra/superpowers` 已到 v7.0.0（2026-10-10，brainstorming 重寫）；這邊已發佈的 v1.7.14 對應的是 v6.4.2
 - 主幹已經有 `feat(brainstorming): 同步上游 v7.0.0 重寫` 這筆 commit，但 release notes 標著「未發布」。想用新功能，得等下一次發版或自己 clone 主幹
-- commit 幾乎都來自同一帳號。風險不是「沒人維護」，而是「只有一個人維護」
+- commit 幾乎都來自同一帳號。專案本身有在動，風險在於維護者只有一位
 
 本機 `.agents/skills/` 只有 20 個 skill，缺 `diagnosing-superpowers`（上游 v6.4.1 才加入），算一算那份安裝至少兩個月沒更新了。重跑一次 `npx superpowers-zh` 就會補齊。
 
@@ -78,14 +78,14 @@ tags:
 
 ## 四個原創 skill
 
-這四個才是差異點。它們不是翻譯，是另外寫的。
+這四個是另外寫的，不是翻譯。
 
 | Skill | 解什麼問題 | 實際內容（節錄） |
 | --- | --- | --- |
-| **chinese-code-review** | 國內團隊 review 的兩個極端：太客氣放過 bug、照搬西方直白讓人下不來臺 | 「你必須改成 X」改成「建議考慮用 X，因為 Y」；反饋分三級：必須修復、建議修改、僅供參考 |
-| **chinese-commit-conventions** | commit 中英混雜、沒有團隊規範 | Conventional Commits 中文 type 對照（feat、fix、docs、perf 等）、commitlint 加 husky 加 commitizen 的中文模板、conventional-changelog 中文配置 |
-| **chinese-documentation** | 中英文擠在一起、全形半形混用、一股機翻味 | 中英文之間加空格、全形標點、術語保留英文，對齊《中文文案排版指北》 |
-| **chinese-git-workflow** | GitHub 不穩、CI 方案照搬國外水土不服 | Gitee、Coding、極狐 GitLab、CNB、GitHub 的平台對比（CI 方案、MR 或 PR、製品庫、適合場景） |
+| `chinese-code-review` | 國內團隊 review 的兩個極端：太客氣放過 bug、照搬西方直白讓人下不來臺 | 「你必須改成 X」改成「建議考慮用 X，因為 Y」；反饋分三級：必須修復、建議修改、僅供參考 |
+| `chinese-commit-conventions` | commit 中英混雜、沒有團隊規範 | Conventional Commits 中文 type 對照（feat、fix、docs、perf 等）、commitlint 加 husky 加 commitizen 的中文模板、conventional-changelog 中文配置 |
+| `chinese-documentation` | 中英文擠在一起、全形半形混用、一股機翻味 | 中英文之間加空格、全形標點、術語保留英文，對齊《中文文案排版指北》 |
+| `chinese-git-workflow` | GitHub 不穩、CI 方案照搬國外水土不服 | Gitee、Coding、極狐 GitLab、CNB、GitHub 的平台對比（CI 方案、MR 或 PR、製品庫、適合場景） |
 
 講白一點，這四個的預設場景偏中國大陸生態。台灣團隊大概只會用到前三個（review 語氣、commit 規範、文件排版）。`chinese-git-workflow` 除非真的在用 Gitee 或極狐，否則參考價值有限。
 
@@ -121,7 +121,7 @@ tags:
 
 # 🎓 觀摩：skill 的 prompt 怎麼寫
 
-以下幾招，在任何「寫給 LLM 的指令」場景都能直接套用。
+這些招數在任何「寫給 LLM 的指令」場景都用得上。
 
 ### 1. `description` 只寫「什麼時候用」
 
@@ -178,7 +178,7 @@ XML 標籤本身沒有魔法，但它把規則從敘述裡切出來，也給模�
 8. 請使用者審查書面規格
 9. 過渡到實作，呼叫 `writing-plans`
 
-「每次一個」這種細節才是關鍵。少了它，模型會一次丟五個問題，使用者只回一半。
+少了「每次一個」，模型會一次丟五個問題，使用者只回一半。
 
 ### 5. 直接堵住「合理化」
 
@@ -195,7 +195,7 @@ XML 標籤本身沒有魔法，但它把規則從敘述裡切出來，也給模�
 
 這是把「模型會怎麼偷懶」當成需求來寫。`writing-skills` 甚至把這件事方法化：先跑 baseline 讓模型在沒有 skill 的情況下犯錯，記錄它用的每一個藉口，再針對那些藉口寫反駁，重跑驗證。
 
-說穿了就是 TDD：紅、綠、重構。
+整個流程其實就是 TDD 的紅、綠、重構。
 
 ### 6. 章節順序：判準放在做法之前
 
@@ -211,9 +211,9 @@ XML 標籤本身沒有魔法，但它把規則從敘述裡切出來，也給模�
 
 `writing-skills` 要求：不要在 SKILL.md 裡列出所有參數，引用 `--help` 就好；不要重複別的 skill 的流程，引用它就好；範例要短。
 
-skill 會進 context，寫得越肥，留給真正工作的空間越小。篇幅是成本，不是誠意。
+skill 會進 context，寫得越肥，留給真正工作的空間越小。
 
-> 📖 **想讀原文的話**：上面這些寫法都來自英文上游 **[github.com/obra/superpowers](https://github.com/obra/superpowers)**。對照中英兩版看同一段規則，比單讀一種語言更容易抓到哪些字是刻意留的、哪些是翻譯後的語氣。有興趣可以直接翻 `skills/` 目錄，每個 `SKILL.md` 都是獨立可讀的樣本。
+> 📖 想讀原文的話：上面這些寫法都來自英文上游 [github.com/obra/superpowers](https://github.com/obra/superpowers)。對照中英兩版看同一段規則，比單讀一種語言更容易抓到哪些字是刻意留的、哪些是翻譯後的語氣。有興趣可以直接翻 `skills/` 目錄，每個 `SKILL.md` 都是獨立可讀的樣本。
 
 ---
 
@@ -242,9 +242,9 @@ npx superpowers-zh --global --tool claude
 
 # ⚠️ 三個實務雷點
 
-1. **別在 `~` 跑專案級安裝**：會把 skills 與 bootstrap 檔寫進家目錄，污染所有專案。v1.2.1 起會拒絕，舊版不會。想全域生效請用 `--global`。
-2. **手動 `cp -r skills` 是低保版**：只搬了 skill 檔，`hooks/`（SessionStart 觸發）與 bootstrap 引導都不見了。結果是 AI 不會主動呼叫，每次都得手動喊。
-3. **卸載靠哨兵註解**：追加到 `CLAUDE.md` 的內容包在 `<!-- superpowers-zh:begin/end -->` 之間，卸載時精確切除。辨識不可靠就跳過並警告。
+1. 別在 `~` 跑專案級安裝。會把 skills 與 bootstrap 檔寫進家目錄，污染所有專案。v1.2.1 起會拒絕，舊版不會。想全域生效請用 `--global`。
+2. 手動 `cp -r skills` 是低保版。只搬了 skill 檔，`hooks/`（SessionStart 觸發）與 bootstrap 引導都不見了。結果是 AI 不會主動呼叫，每次都得手動喊。
+3. 卸載靠哨兵註解。追加到 `CLAUDE.md` 的內容包在 `<!-- superpowers-zh:begin/end -->` 之間，卸載時精確切除。辨識不可靠就跳過並警告。
 
 ---
 
@@ -261,7 +261,7 @@ npx superpowers-zh --global --tool claude
     └── …（共 20 個）
 ```
 
-兩個實測觀察：
+實際裝起來有兩件事值得記。
 
 - 本機 20 個，上游現在 21 個。少的是 `diagnosing-superpowers`（用 transcript 取證、每條結論帶 `path:line`），它是上游 v6.4.1 才加入的，代表這份安裝已經兩個多月沒更新。skill 清單會隨版本變動，重跑一次 `npx superpowers-zh` 比手動補檔可靠。
 - 規則真的會改變行為。這個 repo 的 commit 是 `<type>(<scope>): <繁體中文主旨>`，而且 `AGENTS-NEW-POST-WORKFLOW.md` 特別交代「不要順手清理 CRLF 噪音」。這種「知道團隊在意什麼」的判斷，通用英文 skill 給不了。

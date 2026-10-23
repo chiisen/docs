@@ -80,13 +80,13 @@ public
 ```
 
 ## 更新首頁的版本號
-修改 `_config.yml` 的 `Hexo 1.0.5` 上的版本號  
+標題裡的 `站台 v1.0.108` 是這個網站自己的發版流水號，不是 Hexo 套件版本。Hexo 實際版本看 `package.json` 的 `hexo.version`（目前 8.1.2）。
+
+有內容更新就加 1，用數字加，不要用字串接在後面。`1.0.108` 的下一版是 `1.0.109`。
+
 ```yaml
-title: "⭐️ Sam 的文章分享(持續累積中🏃‍♂️)(cloudflare + Hexo 1.0.5 版)"
+title: "⭐️ 文章分享(持續累積中🏃‍♂️)(cloudflare + 站台 v1.0.108)"
 ```
-一般 npm 套件是修改 `package.json` 的 0.0.0 版本號  
-```shell
-"version": "0.0.0",
-```
-但是目前沒辦法顯示在畫面上，所以才修改 Hexo 上的標題設定檔案 `_config.yml` 的版本號  
+
+`package.json` 的 `version` 維持 `0.0.0`。這個專案是 `private: true`，那個欄位不會出現在首頁。
 

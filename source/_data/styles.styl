@@ -1,0 +1,44 @@
+body
+  line-height 1.75
+
+.header-inner
+  padding-top 72px
+
+  +mobile()
+    padding-top 36px
+
+.content
+  padding-top 40px
+
+  +mobile()
+    padding-top 24px
+
+.post-body
+  p
+    margin 0 0 1.1em
+
+  h1, h2, h3
+    color #1b3330
+
+  a
+    text-underline-offset 0.18em
+
+blockquote
+  border-left-color #1f6b56
+  background #f6f3ec
+  padding 0.35em 1em
+
+.menu-item a
+  transition color 0.2s ease, border-color 0.2s ease
+
+  &:hover
+    color #1f6b56
+
+.menu-item-active a
+  border-bottom 2px solid #1f6b56
+
+hr
+  border 0
+  border-top 1px solid #e4ddd2
+  background none
+  height 0

@@ -80,12 +80,13 @@ public
 ```
 
 ## 更新首頁的版本號
-標題裡的 `站台 v1.0.109` 是這個網站自己的發版流水號，不是 Hexo 套件版本。Hexo 實際版本看 `package.json` 的 `hexo.version`（目前 8.1.2）。
+`subtitle` 會顯示在站名下方，樣式是一顆標籤。這是站台自己的發版流水號，不是 Hexo 套件版本。Hexo 實際版本看 `package.json` 的 `hexo.version`（目前 8.1.2）。
 
 有內容更新就加 1，用數字加，不要用字串接在後面。`1.0.109` 的下一版是 `1.0.110`。
 
 ```yaml
-title: "⭐️ 文章分享(持續累積中🏃‍♂️)(cloudflare + 站台 v1.0.109)"
+title: "⭐️ 文章分享(持續累積中🏃‍♂️)"
+subtitle: "v1.0.109"
 ```
 
 `package.json` 的 `version` 維持 `0.0.0`。這個專案是 `private: true`，那個欄位不會出現在首頁。
